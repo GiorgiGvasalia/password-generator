@@ -1,0 +1,254 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "JetBrains Mono", sans-serif;
+  background: linear-gradient(180deg, #14131b 0%, #08070b 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.generator-app {
+  max-width: 380px;
+  width: 100%;
+}
+
+.generator-app header {
+  text-align: center;
+  color: #817d92;
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.output,
+.conditions {
+  background:  #24232c;
+  margin-top: 2rem;
+  padding: 1.7rem;
+}
+
+.conditions {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.output {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.password-display {
+  color: #e6e5ea;
+  font-size: 22px;
+  font-weight: 700;
+  opacity: 0.25;
+}
+
+.password-display.final-res {
+  opacity: 1;
+}
+
+.output svg {
+  cursor: pointer;
+}
+
+/*  CHARACTERS LENGTH */
+
+.char-length {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.char-length label {
+  color: #e6e5ea;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.char-length span {
+  color: #a4ffaf;
+  font-size: 22px;
+  font-weight: 700;
+}
+
+.length-input {
+  width: 100%;
+}
+
+.checkboxes {
+  padding-top: 0.6rem;
+  padding-bottom: 1rem;
+}
+
+.checkboxes div {
+  padding: 0.5rem;
+  display: flex;
+  align-items: center;
+  gap: 1.3rem;
+}
+
+.checkboxes .label {
+    cursor: pointer;
+}
+
+input[type="checkbox"] {
+  border-radius: 0;
+  border: 2px solid  #e6e5ea;
+  appearance: none;
+  outline: none;
+  width: 16px;
+  height: 16px;
+  cursor: pointer;
+}
+
+input[type="checkbox"]:hover {
+  border: 2px solid  #a4ffaf;
+}
+
+input[type="checkbox"]:checked {
+  background-image: url("./assets/images/icon-check.svg");
+  background-color: #a4ffaf;
+}
+
+input[type="checkbox"]::before {
+  content: "";
+}
+
+/* *********************************************************** */
+/*  RANGE INPUT STYLING */
+
+input[type="range"] {
+  -webkit-appearance: none;
+  width: 100%;
+  height: 10px;
+  background: transparent;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 20px;
+  height: 20px;
+  background:  #e6e5ea;
+  border: 2px solid white;
+  border-radius: 50%;
+  cursor: pointer;
+  margin-top: -6px;
+}
+
+input[type="range"]::-webkit-slider-runnable-track {
+  width: 100%;
+  height: 10px;
+  background:  #18171f;
+  border-radius: 5px;
+}
+
+input[type="range"]::-moz-range-thumb {
+  width: 20px;
+  height: 20px;
+  background: #00ff00;
+  border: 2px solid white;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+input[type="range"]::-moz-range-track {
+  width: 100%;
+  height: 10px;
+  background: #a4ffaf;
+  border-radius: 5px;
+}
+
+input[type="range"]::-ms-thumb {
+  width: 20px;
+  height: 20px;
+  background: #00ff00;
+  border: 2px solid white;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+input[type="range"]::-ms-track {
+  width: 100%;
+  height: 10px;
+  background: #a4ffaf;
+  border-radius: 5px;
+}
+
+/*   STRENGTH  */
+.strength {
+  background: #18171f;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.3rem 1.5rem;
+}
+
+.strength label {
+  color: #817d92;
+  text-align: center;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.generate-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+  background: #a4ffaf;
+  width: 100%;
+  color:  #24232c;
+  font-size: 14px;
+  font-weight: 700;
+  padding: 1.7rem 0 1.7rem 0;
+  border: none;
+  cursor: pointer;
+}
+
+.generate-btn:hover {
+  background:  #24232c;
+  color: #a4ffaf;
+  box-shadow: 0 0 0 2px  #a4ffaf;
+}
+
+.generate-btn:hover path {
+  fill:  #a4ffaf;
+}
+
+.checkboxes label {
+  color:  #e6e5ea;
+  font-feature-settings: "clig" off, "liga" off;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+
+/*  ****************************************** */
+/* SHOW PASSWORD STRENGTH  */
+
+.first-rect.too-weak {
+    fill:  #F64A4A;
+}
+
+.first-rect.weak, .second-rect.weak {
+  fill: #FB7C58;
+}
+.first-rect.medium, .second-rect.medium, .third-rect.medium {
+    fill: #F8CD65;
+}
+
+.first-rect.strong, .second-rect.strong, .third-rect.strong, .fourth-rect.strong {
+   fill: #A4FFAF;
+}
